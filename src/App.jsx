@@ -15,7 +15,7 @@ import { ProfilePage } from "./pages/ProfilePage"
 import { AdminLoginPage } from "./pages/admin/AdminLoginPage"
 import { AdminDashboardPage } from "./pages/admin/AdminDashboardPage"
 import { SuperAdminLoginPage } from "./pages/superadmin/SuperAdminLoginPage"
-import { useEffect } from "react";
+import { SuperAdminDashboardPage } from "./pages/superadmin/SuperAdminDashboardPage"
 
 export default function App() {
   return (
@@ -70,25 +70,5 @@ export default function App() {
 
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
-
-    
   )
 }
-
-function Home() {
-
-  useEffect(() => {
-    fetch("https://your-backend.railway.app/health-db")
-      .then(res => res.json())
-      .then(data => console.log("API:", data))
-      .catch(err => console.log("ERROR:", err));
-  }, []);
-
-  return (
-    <div>
-      <h1>Test API</h1>
-    </div>
-  );
-}
-
-export default Home;
