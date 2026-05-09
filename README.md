@@ -13,4 +13,4 @@ React Vite + Tailwind frontend scaffold for the current bus booking backend.
 
 Create `frontend/.env` if you want a custom backend URL:
 
-`VITE_API_BASE_URL=http://localhost:5000`
+`VITE_API_BASE_URL=${API_URL}`
